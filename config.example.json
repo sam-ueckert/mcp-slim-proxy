@@ -1,0 +1,35 @@
+{
+  "mode": "minify",
+  "prefixTools": "auto",
+  "minify": {
+    "toolDescriptionMaxChars": 160,
+    "paramDescriptionMaxChars": 80,
+    "dropParamDescriptions": false,
+    "stripMarkdown": true
+  },
+  "tools": {
+    "deny": [],
+    "allow": []
+  },
+  "defer": {
+    "pinned": []
+  },
+  "upstreams": [
+    {
+      "name": "archy",
+      "transport": "sse",
+      "url": "http://k3scontroller:30765/sse"
+    },
+    {
+      "name": "foreman",
+      "transport": "streamable-http",
+      "url": "http://k3scontroller:30766/mcp"
+    },
+    {
+      "name": "vault",
+      "transport": "stdio",
+      "command": "bash",
+      "args": ["/home/swabby/repos/vault-mcp/start.sh"]
+    }
+  ]
+}
