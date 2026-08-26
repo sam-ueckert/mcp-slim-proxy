@@ -21,15 +21,12 @@
       "url": "http://k3scontroller:30765/sse"
     },
     {
-      "name": "foreman",
-      "transport": "streamable-http",
-      "url": "http://k3scontroller:30766/mcp"
-    },
-    {
       "name": "vault",
       "transport": "stdio",
       "command": "bash",
-      "args": ["/home/swabby/repos/vault-mcp/start.sh"]
+      "args": [
+        "/home/swabby/repos/vault-mcp/start.sh"
+      ]
     }
   ]
 }

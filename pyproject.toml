@@ -3,7 +3,7 @@ name = "mcp-slim-proxy"
 version = "0.2.0"
 description = "MCP proxy that aggregates upstream MCP servers and re-advertises their tools with minified schemas to reduce LLM context spent on tool metadata"
 requires-python = ">=3.10"
-dependencies = ["mcp>=1.2.0"]
+dependencies = ["mcp>=1.2.0,<2.0.0"]
 
 [project.scripts]
 mcp-slim-proxy = "mcp_slim_proxy.server:cli"
